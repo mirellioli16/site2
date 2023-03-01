@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+      padding: 25px;
+      background-color: white;
+      color: black;
+      font-size: 25px;
+        }
+       .dark-mode{
+        background-color: black;
+        color: white;
+       }
+       img{
+        width: 100px ;
+       }
+       </style>
+
+</head>
+<body>
+    <h1>usando modo escuro</h1>
+    <h2>Usando dark mode com html,css, js</h2>
+
+    <p> Este é um exemplo de Utilização
+    do modo escuro com uso de uma imagem com botão.
+site em modo escuro utilizando html,css e javascript</p>
+
+<img src="https://cdn-icons-png.flaticon.com/512/5558/5558226.png" onclick="darkMode()"/>
+<script>
+     function darkMode(){
+        let minhaImagem= document.querySelector('img');
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        let meuSrc = minhaImagem.getAttribute('src');
+        if(meuSrc ==='https://cdn-icons-png.flaticon.com/512/5558/5558226.png') {
+            minhaImagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/5262/5262027.png');
+
+        } else {
+
+            minhaImagem.setAttribute('src','https://cdn-icons-png.flaticon.com/512/5558/5558226.png');
+        }
+    }
+</script>
+</body>
+</html>
